@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version
+  - docker build -f udagram-api-feed/Dockerfile -t songokudev/udagram-api-feed:v2 udagram-api-feed
+  - docker build -f udagram-api-user/Dockerfile -t songokudev/udagram-api-user:v2 udagram-api-user
+  - docker build -f udagram-frontend/Dockerfile -t songokudev/udagram-frontend:v2 udagram-frontend
+  - docker build -f udagram-reverseproxy/Dockerfile -t songokudev/udagram-reverseproxy:v2 udagram-reverseproxy
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push YOUR_DOCKER_HUB/simple-node
