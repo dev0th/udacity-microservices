@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: songokudev/udagram-frontend:v8
+          image: songokudev/udagram-frontend:v9
           ports:
             - containerPort: 80
           resources:
