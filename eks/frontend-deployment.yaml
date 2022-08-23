@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: songokudev/udagram-frontend:v6
+          image: songokudev/udagram-frontend:v7
           ports:
             - containerPort: 80
           resources:
             requests:
               memory: "64Mi"
-              cpu: "250m"
+              cpu: "180m"
             limits:
-              memory: "1024Mi"
-              cpu: "500m"
+              memory: "987Mi"
+              cpu: "240m"
 

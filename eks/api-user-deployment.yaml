@@ -22,10 +22,10 @@ spec:
           resources:
             requests:
               memory: "1024Mi"
-              cpu: "500m"
+              cpu: "300m"
             limits:
-              memory: "2024Mi"
-              cpu: "1000m"
+              memory: "1800Mi"
+              cpu: "400m"
           env:
             - name: POSTGRES_USERNAME
               valueFrom:
