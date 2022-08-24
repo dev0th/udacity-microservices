@@ -16,16 +16,16 @@ spec:
     spec:
       containers:
         - name: backend-feed
-          image: songokudev/udagram-api-feed:v12
+          image: songokudev/udagram-api-feed:v14
           ports:
             - containerPort: 8080
           resources:
             requests:
-              memory: "680Mi"
-              cpu: "200m"
+              memory: "1024Mi"
+              cpu: "300m"
             limits:
-              memory: "1200Mi"
-              cpu: "265m"
+              memory: "1800Mi"
+              cpu: "400m"
           env:
             - name: POSTGRES_USERNAME
               valueFrom:

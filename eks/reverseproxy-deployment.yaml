@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: reverseproxy
-          image: songokudev/reverseproxy:v12
+          image: songokudev/reverseproxy:v14
           resources:
             requests:
               memory: "64Mi"
